@@ -15,5 +15,7 @@ namespace LibraryApi.Models
             optionsBuilder.UseNpgsql("Host=localhost;Database=libraryapi;Username=admin;Password=1");
 
         }
+
+        public DbSet<Author> Authors { get; set; }
     }
 }
