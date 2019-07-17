@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using JsonApiDotNetCore.Models;
 
 namespace LibraryApi.Models
@@ -9,5 +10,7 @@ namespace LibraryApi.Models
 
         [Attr("last")]
         public string Last { get; set; } 
+
+        [HasMany("books")] public List<Book> Books { get; set; }
     }
 }
